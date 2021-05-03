@@ -16,7 +16,7 @@ Ce projet sera maintenu au fil des mois pour tendre vers un projet utilisable en
 - CEBERIO Pierre  **[@PierreYnov](https://github.com/PierreYnov)**
 - DIAS Steven **[@StevenDias33](https://github.com/StevenDias33)**
 - FEUGERE Thibault **[@thibaultfeugere](https://gitlab.com/thibaultfeugere)**
-- LABORDE Simon **[@Genisys](https://gitlab.com/Genisys)**
+- LABORDE Simon **[@Genisys](https://github.com/Genisys33)**
 
 Un grand merci à Kidrek pour son projet DFIR qui nous a beaucoup aidé. **[@Kidrek](https://github.com/kidrek/)**
 
