@@ -1,0 +1,92 @@
+{
+  "builders": [
+    {
+      "type": "vmware-iso",
+      "name": "template-Win10--dfir",
+      "vm_name": "template-Win10--dfir",
+      "cpus":"4",
+      "memory":"2048",
+      "Version": "12",
+      "skip_compaction": true,
+      "guest_os_type": "windows9-64",
+      "tools_upload_flavor": "windows",
+      "tools_upload_path": "c:/Windows/Temp/windows.iso",
+      "vmx_data": {
+        "ethernet0.networkName": "{{ user `esxi_network_portgroup` }}",
+        "ethernet0.virtualDev": "e1000",
+        "ethernet0.present": "TRUE",
+        "virtualHW.version": "10",
+        "scsi0.virtualDev": "lsisas1068"
+      },
+
+      "remote_type": "esx5",
+      "remote_host": "{{ user `esxi_host` }}",
+      "remote_username": "{{ user `esxi_user` }}",
+      "remote_password": "{{ user `esxi_password` }}",
+      "remote_datastore": "{{ user `esxi_datastore` }}",
+      "skip_validate_credentials": true,
+      "skip_export": false,
+      "keep_registered": false,
+      "format": "ova",
+      "output_directory": "../ova/",
+
+      "iso_urls": [
+        "../ISO/win10_19041.264.200511-0456.vb_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso",
+        "https://software-download.microsoft.com/download/pr/19041.264.200511-0456.vb_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso"
+      ],
+      "iso_target_path": "../ISO",
+      "iso_checksum": "md5:e85637e135e9b6dbc5fa02b463a95764",
+      "boot_wait": "6m",
+
+      "communicator": "winrm",
+      "winrm_username": "analyste",
+      "winrm_password": "analyste",
+      "winrm_port": "5985",
+      "winrm_timeout": "3h",
+      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer shutdown\"",
+      "shutdown_timeout": "30m",
+      "floppy_label": "A",
+      "floppy_files": [
+        "./Autounattend.xml",
+        "../SCRIPTS/chocolatey.ps1",
+        "../SCRIPTS/disable-screensaver.ps1",
+        "../SCRIPTS/disable-winrm.ps1",
+        "../SCRIPTS/enable-winrm.ps1",
+        "../SCRIPTS/fixnetwork.ps1",
+        "../SCRIPTS/microsoft-updates.bat",
+        "../SCRIPTS/rearm-windows.ps1",
+        "../SCRIPTS/win-updates.ps1",
+	"../SCRIPTS/disable-windowsDefender.bat"
+      ],
+      "headless": true,
+      "disable_vnc": true,
+      "vnc_disable_password": true,
+      "vnc_bind_address": "127.0.0.1",
+      "vnc_over_websocket": true,
+      "insecure_connection": true
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "powershell",
+      "elevated_user": "analyste",
+      "elevated_password": "analyste",
+      "execution_policy": "bypass",
+      "inline": [
+	"Set-WinUserLanguageList -LanguageList fr-FR -Force",
+	"Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize' -Name 'SystemUsesLightTheme' -Type DWord -Value 1",
+        "choco install -y 7zip",
+        "choco install -y keepass"
+      ]
+    },
+    {
+      "type": "powershell",
+      "scripts": [
+	"../SCRIPTS/vmware-tools.ps1"
+      ]
+    },
+    {
+      "type": "windows-restart"
+    }
+  ]
+}

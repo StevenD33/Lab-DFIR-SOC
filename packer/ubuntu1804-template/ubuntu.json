@@ -1,0 +1,88 @@
+{
+  "builders": [
+    
+    {
+      "boot_command": [
+        "<esc><wait>",
+        "<esc><wait>",
+        "<enter><wait>",
+        "/install/vmlinuz noapic ",
+        "initrd=/install/initrd.gz ",
+        "preseed/url=http://{{.HTTPIP}}:{{.HTTPPort}}/preseed.cfg ",
+        "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
+        "hostname=ubuntu-template ",
+        "grub-installer/bootdev=/dev/sda<wait> ",
+        "fb=false debconf/frontend=noninteractive ",
+        "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=FR ",
+        "keyboard-configuration/variant=FR console-setup/ask_detect=false ",
+        "-- <enter>"
+    ],
+      "type": "vmware-iso",
+      "disk_size":"8192",
+      "disk_type_id": "thin",
+      "guest_os_type": "ubuntu-64",
+      "cpus": 4,
+      "memory": 4096,
+      "floppy_files": [
+        "./http/preseed.cfg"
+      ],
+      "iso_checksum": "md5:a3e1c494a02abf1249749fa4fd386438",
+      "iso_url": "../ISO/ubuntu-18.04.5-server-amd64.iso",
+      "keep_registered": true,
+      "http_directory": "http",
+      "name": "ubuntu_1804_template",
+      "remote_type": "esx5",
+      "remote_host": "",
+      "vmdk_name": "ubuntu_1804_template",
+      "remote_username": "",
+      "remote_password": "",
+      "remote_datastore": "datastore1",
+      "remote_output_directory": "Clone_VM_Template/ubuntu_1804_template",
+      "skip_validate_credentials": true,
+      "skip_export":"true",
+      "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'ubuntu'|sudo -S sh 'shutdown.sh'",
+      "ssh_password": "Analyste",
+      "ssh_timeout": "15m",
+      "ssh_username": "analyste",
+      "headless": true,
+      "vnc_disable_password": true,
+      "vnc_bind_address": "127.0.0.1",
+      "vnc_over_websocket": true,
+      "insecure_connection": true,
+      "tools_upload_flavor": "linux",
+      "vm_name": "ubuntu_1804_template",
+      "vmx_data": {
+        "ethernet0.networkName": "Vswitch-Infinity2",
+        "ethernet0.virtualDev": "e1000",
+        "ethernet0.present": "TRUE",
+        "virtualHW.version": "10",
+        "scsi0.virtualDev": "lsisas1068"
+
+     
+      }
+      
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "sudo apt update && sudo apt upgrade -y",
+        "sudo apt install -y open-vm-tools htop net-tools ifplugd resolvconf vim",
+        "echo 'alias ll=\"ls -la\" >> $HOME/.bashrc'; echo 'alias ll=\"ls -la\"' | sudo tee -a /root/.bashrc;",
+        "echo 'set mouse-=a' > $HOME/.vimrc; echo 'set mouse-=a' | sudo tee /root/.vimrc",
+        "echo 'auto eth0' | sudo tee -a /etc/network/interfaces",
+        "echo 'iface eth0 inet dhcp' | sudo tee -a /etc/network/interfaces",
+        "echo 'pre-up sleep 2' | sudo tee -a /etc/network/interfaces",
+        "sudo sed -i -e 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX=\"net.ifnames=0 biosdevname=0\"/g' /etc/default/grub",
+        "sudo grub-mkconfig -o /boot/grub/grub.cfg",
+        "sudo sed -i -e 's/INTERFACES=.*/INTERFACES=\"eth0\"/g' /etc/default/ifplugd",
+	"sudo wget http://10.10.13.5:8000/lvm_ubuntu.service && sudo mv lvm_ubuntu.service /etc/systemd/system/",
+	"sudo wget http://10.10.13.5:8000/lvm_ubuntu.sh && sudo mv lvm_ubuntu.sh /usr/local/bin/",
+	"sudo chmod 744 /usr/local/bin/lvm_ubuntu.sh && sudo chmod 664 /etc/systemd/system/lvm_ubuntu.service",
+	"sudo systemctl daemon-reload",
+	"sudo systemctl enable lvm_ubuntu"
+        ]
+    }
+  ]
+}

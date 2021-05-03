@@ -1,0 +1,7 @@
+{
+  "esxi_host": "<esxi_host>",
+  "esxi_user": "<esxi_username>",
+  "esxi_password": "<esxi_password>",
+  "esxi_datastore": "<esxi_datastore>",
+  "esxi_network_portgroup": "<esxi_network_portgroup>"
+}

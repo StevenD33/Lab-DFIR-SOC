@@ -1,0 +1,20 @@
+[Unit]
+Description=Cuckoo Daemon
+After=network.target
+ 
+[Service]
+Type=simple
+ 
+User=vagrant
+Group=vagrant
+UMask=007
+ 
+ExecStart=/bin/bash /opt/cuckoo.sh
+ 
+Restart=on-failure
+ 
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=300
+ 
+[Install]
+WantedBy=multi-user.target

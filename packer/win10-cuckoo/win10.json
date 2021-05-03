@@ -1,0 +1,94 @@
+{
+  "builders": [
+    {
+      "type": "qemu",
+      "communicator": "winrm",
+      "winrm_port": "5985",
+      "skip_compaction": "false",
+      "output_directory": "./win10",
+      "format": "qcow2",
+      "disk_size": "20480",
+      "accelerator": "kvm",
+      "cpus":"2",
+      "memory":"1024",
+      "qemuargs": [
+        [
+          "-drive",
+          "file=./win10/{{ .Name }},if=virtio,cache=writeback,discard=ignore,format=qcow2,index=1"
+        ],
+        [
+          "-drive",
+          "file=./windows10-enterprise.iso,media=cdrom,index=2"
+        ],
+        [
+          "-drive",
+          "file=./drivers/virtio-win.iso,media=cdrom,index=3"
+        ],
+        [
+          "-m",
+          "1024"
+        ],
+        [
+          "-usbdevice",
+          "tablet"
+        ],
+        [
+          "-smp",
+          "2"
+        ],
+        [
+          "-cpu",
+          "Westmere"
+        ]
+      ],
+      "vm_name": "Win10.qcow2",
+      "iso_url": "./windows10-enterprise.iso",
+      "iso_checksum": "md5:e85637e135e9b6dbc5fa02b463a95764",
+      "boot_wait": "6m",
+      "winrm_username": "analyste",
+      "winrm_password": "analyste",
+      "winrm_timeout": "2h",
+      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer shutdown\"",
+      "shutdown_timeout": "30m",
+      "floppy_files": [
+        "./Autounattend.xml",
+        "../SCRIPTS/chocolatey.ps1",
+        "../SCRIPTS/disable-windows-update.ps1",
+        "../SCRIPTS//disable-windowsDefender.bat",
+        "../SCRIPTS/disable-winrm.ps1",
+        "../SCRIPTS/enable-winrm.ps1",
+        "../SCRIPTS/fixnetwork.ps1"
+      ],
+      "headless": true
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "powershell",
+      "inline": [
+        "Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False",
+        "choco install -y 7zip putty filezilla firefoxesr vlc vscodium",
+        "choco install -y git python2 python3 golang",
+        "choco install -y adobereader",
+        "choco install -y sysmon winlogbeat"
+      ]
+    },
+    {
+      "type": "powershell",
+      "scripts": [
+        "./scripts/Set-SysmonSettings.ps1",
+        "./scripts/Set-WindowsTelemetrySettings.ps1"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "./files/cuckoo_agent.py",
+      "destination": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUP\\agent.pyw"
+    },
+    {
+      "type": "file",
+      "source": "./files/winlogbeat-sandbox.yml",
+      "destination": "C:\\ProgramData\\chocolatey\\lib\\winlogbeat\\tools\\winlogbeat.yml"
+    }
+  ]
+}

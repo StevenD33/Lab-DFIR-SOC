@@ -1,0 +1,887 @@
+Warning: Warning when preparing build: "ubuntu_1804_template"
+
+[WARN] When 'vnc_over_websocket' is set any other VNC configuration will be
+ignored.
+
+Warning: Warning when preparing build: "ubuntu_1804_template"
+
+Your vmx data contains the following variable(s), which Packer normally sets
+when it generates its own default vmx template. This may cause your build to
+fail or behave unpredictably: virtualHW.version, ethernet0.virtualDev,
+scsi0.virtualDev
+
+
+[1;32mubuntu_1804_template: output will be in this color.[0m
+
+[1;32m==> ubuntu_1804_template: Retrieving ISO[0m
+[1;32m==> ubuntu_1804_template: Trying ../ISO/ubuntu-18.04.5-server-amd64.iso[0m
+[1;32m==> ubuntu_1804_template: Trying ../ISO/ubuntu-18.04.5-server-amd64.iso?checksum=md5%3Aa3e1c494a02abf1249749fa4fd386438[0m
+[1;32m==> ubuntu_1804_template: ../ISO/ubuntu-18.04.5-server-amd64.iso?checksum=md5%3Aa3e1c494a02abf1249749fa4fd386438 => /home/vmconfig2/workspace/packer/ISO/ubuntu-18.04.5-server-amd64.iso[0m
+[1;32m==> ubuntu_1804_template: Configuring output and export directories...[0m
+[1;32m==> ubuntu_1804_template: Creating floppy disk...[0m
+[0;32m    ubuntu_1804_template: Copying files flatly from floppy_files[0m
+[0;32m    ubuntu_1804_template: Copying file: ./http/preseed.cfg[0m
+[0;32m    ubuntu_1804_template: Done copying files from floppy_files[0m
+[0;32m    ubuntu_1804_template: Collecting paths from floppy_dirs[0m
+[0;32m    ubuntu_1804_template: Resulting paths from floppy_dirs : [][0m
+[0;32m    ubuntu_1804_template: Done copying paths from floppy_dirs[0m
+[1;32m==> ubuntu_1804_template: Uploading Floppy to remote machine...[0m
+[0;32m    ubuntu_1804_template: packer177949731[0m 1.41 MiB / 1.41 MiB [===================================================================================================] 100.00% 0s
+[1A[0;32m    ubuntu_1804_template: packer177949731[0m 1.41 MiB / 1.41 MiB [===================================================================================================] 100.00% 0s
+[1;32m==> ubuntu_1804_template: Remote cache was verified skipping remote upload...[0m
+[1;32m==> ubuntu_1804_template: Creating required virtual machine disks[0m
+[1;32m==> ubuntu_1804_template: Building and writing VMX file[0m
+[1;32m==> ubuntu_1804_template: Starting HTTP server on port 8315[0m
+[1;32m==> ubuntu_1804_template: Registering remote VM...[0m
+[1;32m==> ubuntu_1804_template: Starting virtual machine...[0m
+[0;32m    ubuntu_1804_template: The VM will be run headless, without a GUI, as configured.
+    ubuntu_1804_template: If the run isn't succeeding as you expect, please enable the GUI
+    ubuntu_1804_template: to inspect the progress of the build.[0m
+[1;32m==> ubuntu_1804_template: Connecting to VNC over websocket...[0m
+[1;32m==> ubuntu_1804_template: Waiting 10s for boot...[0m
+[1;32m==> ubuntu_1804_template: Typing the boot command over VNC...[0m
+[1;32m==> ubuntu_1804_template: Waiting for SSH to become available...[0m
+[1;32m==> ubuntu_1804_template: Connected to SSH![0m
+[1;32m==> ubuntu_1804_template: Provisioning with shell script: /tmp/packer-shell168418886[0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.[0m
+[1;31m==> ubuntu_1804_template:[0m
+[0;32m    ubuntu_1804_template: Hit:1 http://fr.archive.ubuntu.com/ubuntu bionic InRelease[0m
+[0;32m    ubuntu_1804_template: Hit:2 http://fr.archive.ubuntu.com/ubuntu bionic-updates InRelease[0m
+[0;32m    ubuntu_1804_template: Hit:3 http://fr.archive.ubuntu.com/ubuntu bionic-backports InRelease[0m
+[0;32m    ubuntu_1804_template: Hit:4 http://security.ubuntu.com/ubuntu bionic-security InRelease[0m
+[0;32m    ubuntu_1804_template: Reading package lists...[0m
+[0;32m    ubuntu_1804_template: Building dependency tree...[0m
+[0;32m    ubuntu_1804_template: Reading state information...[0m
+[0;32m    ubuntu_1804_template: 100 packages can be upgraded. Run 'apt list --upgradable' to see them.[0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.[0m
+[1;31m==> ubuntu_1804_template:[0m
+[0;32m    ubuntu_1804_template: Reading package lists...[0m
+[0;32m    ubuntu_1804_template: Building dependency tree...[0m
+[0;32m    ubuntu_1804_template: Reading state information...[0m
+[0;32m    ubuntu_1804_template: Calculating upgrade...[0m
+[0;32m    ubuntu_1804_template: The following NEW packages will be installed:[0m
+[0;32m    ubuntu_1804_template:   linux-headers-4.15.0-140 linux-headers-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template:   linux-image-4.15.0-140-generic linux-modules-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template:   linux-modules-extra-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template: The following packages will be upgraded:[0m
+[0;32m    ubuntu_1804_template:   accountsservice apt apt-utils base-files bind9-host bsdutils[0m
+[0;32m    ubuntu_1804_template:   busybox-initramfs busybox-static distro-info-data dnsutils fdisk[0m
+[0;32m    ubuntu_1804_template:   friendly-recovery gpgv initramfs-tools initramfs-tools-bin[0m
+[0;32m    ubuntu_1804_template:   initramfs-tools-core intel-microcode iproute2 isc-dhcp-client[0m
+[0;32m    ubuntu_1804_template:   isc-dhcp-common krb5-locales libaccountsservice0 libapt-inst2.0[0m
+[0;32m    ubuntu_1804_template:   libapt-pkg5.0 libaudit-common libaudit1 libbind9-160 libblkid1 libc-bin[0m
+[0;32m    ubuntu_1804_template:   libc6 libcryptsetup12 libdns-export1100 libdns1100 libfdisk1 libglib2.0-0[0m
+[0;32m    ubuntu_1804_template:   libglib2.0-data libgssapi-krb5-2 libirs160 libisc-export169 libisc169[0m
+[0;32m    ubuntu_1804_template:   libisccc160 libisccfg160 libk5crypto3 libkrb5-3 libkrb5support0 liblwres160[0m
+[0;32m    ubuntu_1804_template:   libmount1 libnetplan0 libnss-systemd libp11-kit0 libpam-modules[0m
+[0;32m    ubuntu_1804_template:   libpam-modules-bin libpam-runtime libpam-systemd libpam0g libpcap0.8[0m
+[0;32m    ubuntu_1804_template:   libpython3.6-minimal libpython3.6-stdlib libsmartcols1 libssl1.0.0 libssl1.1[0m
+[0;32m    ubuntu_1804_template:   libsystemd0 libudev1 libuuid1 libx11-6 libx11-data libzstd1 linux-firmware[0m
+[0;32m    ubuntu_1804_template:   linux-generic linux-headers-generic linux-image-generic locales lshw mount[0m
+[0;32m    ubuntu_1804_template:   multiarch-support netplan.io nplan openssl perl-base python-apt-common[0m
+[0;32m    ubuntu_1804_template:   python3-apt python3-distupgrade python3.6 python3.6-minimal sudo systemd[0m
+[0;32m    ubuntu_1804_template:   systemd-sysv tar tzdata ubuntu-keyring ubuntu-minimal[0m
+[0;32m    ubuntu_1804_template:   ubuntu-release-upgrader-core ubuntu-standard udev util-linux uuid-runtime[0m
+[0;32m    ubuntu_1804_template:   vim-common vim-tiny wireless-regdb xxd[0m
+[0;32m    ubuntu_1804_template: 100 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.[0m
+[0;32m    ubuntu_1804_template: Need to get 178 MB of archives.[0m
+[0;32m    ubuntu_1804_template: After this operation, 334 MB of additional disk space will be used.[0m
+[0;32m    ubuntu_1804_template: Get:1 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc6 amd64 2.27-3ubuntu1.4 [2,832 kB][0m
+[0;32m    ubuntu_1804_template: Get:2 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 base-files amd64 10.1ubuntu2.10 [60.4 kB][0m
+[0;32m    ubuntu_1804_template: Get:3 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 bsdutils amd64 1:2.31.1-0.4ubuntu3.7 [60.2 kB][0m
+[0;32m    ubuntu_1804_template: Get:4 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 perl-base amd64 5.26.1-6ubuntu0.5 [1,391 kB][0m
+[0;32m    ubuntu_1804_template: Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 tar amd64 1.29b-2ubuntu0.2 [234 kB][0m
+[0;32m    ubuntu_1804_template: Get:6 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libuuid1 amd64 2.31.1-0.4ubuntu3.7 [20.1 kB][0m
+[0;32m    ubuntu_1804_template: Get:7 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libblkid1 amd64 2.31.1-0.4ubuntu3.7 [124 kB][0m
+[0;32m    ubuntu_1804_template: Get:8 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libfdisk1 amd64 2.31.1-0.4ubuntu3.7 [164 kB][0m
+[0;32m    ubuntu_1804_template: Get:9 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmount1 amd64 2.31.1-0.4ubuntu3.7 [136 kB][0m
+[0;32m    ubuntu_1804_template: Get:10 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsmartcols1 amd64 2.31.1-0.4ubuntu3.7 [83.8 kB][0m
+[0;32m    ubuntu_1804_template: Get:11 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 fdisk amd64 2.31.1-0.4ubuntu3.7 [108 kB][0m
+[0;32m    ubuntu_1804_template: Get:12 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 util-linux amd64 2.31.1-0.4ubuntu3.7 [904 kB][0m
+[0;32m    ubuntu_1804_template: Get:13 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 locales all 2.27-3ubuntu1.4 [3,611 kB][0m
+[0;32m    ubuntu_1804_template: Get:14 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libc-bin amd64 2.27-3ubuntu1.4 [643 kB][0m
+[0;32m    ubuntu_1804_template: Get:15 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss-systemd amd64 237-3ubuntu10.45 [105 kB][0m
+[0;32m    ubuntu_1804_template: Get:16 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsystemd0 amd64 237-3ubuntu10.45 [210 kB][0m
+[0;32m    ubuntu_1804_template: Get:17 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-systemd amd64 237-3ubuntu10.45 [107 kB][0m
+[0;32m    ubuntu_1804_template: Get:18 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 systemd amd64 237-3ubuntu10.45 [2,913 kB][0m
+[0;32m    ubuntu_1804_template: Get:19 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 udev amd64 237-3ubuntu10.45 [1,101 kB][0m
+[0;32m    ubuntu_1804_template: Get:20 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libudev1 amd64 237-3ubuntu10.45 [59.0 kB][0m
+[0;32m    ubuntu_1804_template: Get:21 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaudit-common all 1:2.8.2-1ubuntu1.1 [4,068 B][0m
+[0;32m    ubuntu_1804_template: Get:22 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaudit1 amd64 1:2.8.2-1ubuntu1.1 [38.7 kB][0m
+[0;32m    ubuntu_1804_template: Get:23 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam0g amd64 1.1.8-3.6ubuntu2.18.04.2 [54.9 kB][0m
+[0;32m    ubuntu_1804_template: Get:24 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-modules-bin amd64 1.1.8-3.6ubuntu2.18.04.2 [36.7 kB][0m
+[0;32m    ubuntu_1804_template: Get:25 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-modules amd64 1.1.8-3.6ubuntu2.18.04.2 [242 kB][0m
+[0;32m    ubuntu_1804_template: Get:26 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-runtime all 1.1.8-3.6ubuntu2.18.04.2 [37.1 kB][0m
+[0;32m    ubuntu_1804_template: Get:27 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 friendly-recovery all 0.2.38ubuntu1.2 [9,012 B][0m
+[0;32m    ubuntu_1804_template: Get:28 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 initramfs-tools all 0.130ubuntu3.11 [9,580 B][0m
+[0;32m    ubuntu_1804_template: Get:29 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 initramfs-tools-core all 0.130ubuntu3.11 [48.9 kB][0m
+[0;32m    ubuntu_1804_template: Get:30 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 initramfs-tools-bin amd64 0.130ubuntu3.11 [11.1 kB][0m
+[0;32m    ubuntu_1804_template: Get:31 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 busybox-initramfs amd64 1:1.27.2-2ubuntu3.3 [165 kB][0m
+[0;32m    ubuntu_1804_template: Get:32 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 systemd-sysv amd64 237-3ubuntu10.45 [16.7 kB][0m
+[0;32m    ubuntu_1804_template: Get:33 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcryptsetup12 amd64 2:2.0.2-1ubuntu1.2 [134 kB][0m
+[0;32m    ubuntu_1804_template: Get:34 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 mount amd64 2.31.1-0.4ubuntu3.7 [107 kB][0m
+[0;32m    ubuntu_1804_template: Get:35 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libzstd1 amd64 1.3.3+dfsg-2ubuntu1.2 [189 kB][0m
+[0;32m    ubuntu_1804_template: Get:36 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libapt-pkg5.0 amd64 1.6.13 [808 kB][0m
+[0;32m    ubuntu_1804_template: Get:37 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libapt-inst2.0 amd64 1.6.13 [54.6 kB][0m
+[0;32m    ubuntu_1804_template: Get:38 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apt amd64 1.6.13 [1,201 kB][0m
+[0;32m    ubuntu_1804_template: Get:39 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apt-utils amd64 1.6.13 [206 kB][0m
+[0;32m    ubuntu_1804_template: Get:40 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 gpgv amd64 2.2.4-1ubuntu1.4 [198 kB][0m
+[0;32m    ubuntu_1804_template: Get:41 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ubuntu-keyring all 2018.09.18.1~18.04.2 [22.3 kB][0m
+[0;32m    ubuntu_1804_template: Get:42 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.1 amd64 1.1.1-1ubuntu2.1~18.04.9 [1,301 kB][0m
+[0;32m    ubuntu_1804_template: Get:43 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3.6 amd64 3.6.9-1~18.04ubuntu1.4 [203 kB][0m
+[0;32m    ubuntu_1804_template: Get:44 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6-stdlib amd64 3.6.9-1~18.04ubuntu1.4 [1,712 kB][0m
+[0;32m    ubuntu_1804_template: Get:45 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3.6-minimal amd64 3.6.9-1~18.04ubuntu1.4 [1,610 kB][0m
+[0;32m    ubuntu_1804_template: Get:46 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6-minimal amd64 3.6.9-1~18.04ubuntu1.4 [534 kB][0m
+[0;32m    ubuntu_1804_template: Get:47 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 uuid-runtime amd64 2.31.1-0.4ubuntu3.7 [34.8 kB][0m
+[0;32m    ubuntu_1804_template: Get:48 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libp11-kit0 amd64 0.23.9-2ubuntu0.1 [187 kB][0m
+[0;32m    ubuntu_1804_template: Get:49 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 distro-info-data all 0.37ubuntu0.9 [4,708 B][0m
+[0;32m    ubuntu_1804_template: Get:50 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 iproute2 amd64 4.15.0-2ubuntu1.3 [721 kB][0m
+[0;32m    ubuntu_1804_template: Get:51 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libisc-export169 amd64 1:9.11.3+dfsg-1ubuntu1.14 [163 kB][0m
+[0;32m    ubuntu_1804_template: Get:52 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libdns-export1100 amd64 1:9.11.3+dfsg-1ubuntu1.14 [749 kB][0m
+[0;32m    ubuntu_1804_template: Get:53 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 isc-dhcp-client amd64 4.3.5-3ubuntu7.2 [244 kB][0m
+[0;32m    ubuntu_1804_template: Get:54 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 isc-dhcp-common amd64 4.3.5-3ubuntu7.2 [45.8 kB][0m
+[0;32m    ubuntu_1804_template: Get:55 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libglib2.0-0 amd64 2.56.4-0ubuntu0.18.04.8 [1,171 kB][0m
+[0;32m    ubuntu_1804_template: Get:56 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libglib2.0-data all 2.56.4-0ubuntu0.18.04.8 [4,716 B][0m
+[0;32m    ubuntu_1804_template: Get:57 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnetplan0 amd64 0.99-0ubuntu3~18.04.4 [22.5 kB][0m
+[0;32m    ubuntu_1804_template: Get:58 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 netplan.io amd64 0.99-0ubuntu3~18.04.4 [70.7 kB][0m
+[0;32m    ubuntu_1804_template: Get:59 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 nplan all 0.99-0ubuntu3~18.04.4 [1,796 B][0m
+[0;32m    ubuntu_1804_template: Get:60 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openssl amd64 1.1.1-1ubuntu2.1~18.04.9 [614 kB][0m
+[0;32m    ubuntu_1804_template: Get:61 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 sudo amd64 1.8.21p2-3ubuntu1.4 [428 kB][0m
+[0;32m    ubuntu_1804_template: Get:62 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 tzdata all 2021a-0ubuntu0.18.04 [190 kB][0m
+[0;32m    ubuntu_1804_template: Get:63 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 xxd amd64 2:8.0.1453-1ubuntu1.4 [49.3 kB][0m
+[0;32m    ubuntu_1804_template: Get:64 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 vim-tiny amd64 2:8.0.1453-1ubuntu1.4 [476 kB][0m
+[0;32m    ubuntu_1804_template: Get:65 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 vim-common all 2:8.0.1453-1ubuntu1.4 [70.4 kB][0m
+[0;32m    ubuntu_1804_template: Get:66 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ubuntu-minimal amd64 1.417.5 [2,624 B][0m
+[0;32m    ubuntu_1804_template: Get:67 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 accountsservice amd64 0.6.45-1ubuntu1.3 [62.4 kB][0m
+[0;32m    ubuntu_1804_template: Get:68 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaccountsservice0 amd64 0.6.45-1ubuntu1.3 [72.7 kB][0m
+[0;32m    ubuntu_1804_template: Get:69 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libirs160 amd64 1:9.11.3+dfsg-1ubuntu1.14 [19.1 kB][0m
+[0;32m    ubuntu_1804_template: Get:70 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 bind9-host amd64 1:9.11.3+dfsg-1ubuntu1.14 [53.4 kB][0m
+[0;32m    ubuntu_1804_template: Get:71 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 dnsutils amd64 1:9.11.3+dfsg-1ubuntu1.14 [145 kB][0m
+[0;32m    ubuntu_1804_template: Get:72 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libbind9-160 amd64 1:9.11.3+dfsg-1ubuntu1.14 [27.6 kB][0m
+[0;32m    ubuntu_1804_template: Get:73 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libisccfg160 amd64 1:9.11.3+dfsg-1ubuntu1.14 [48.4 kB][0m
+[0;32m    ubuntu_1804_template: Get:74 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libisccc160 amd64 1:9.11.3+dfsg-1ubuntu1.14 [17.9 kB][0m
+[0;32m    ubuntu_1804_template: Get:75 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libdns1100 amd64 1:9.11.3+dfsg-1ubuntu1.14 [968 kB][0m
+[0;32m    ubuntu_1804_template: Get:76 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libisc169 amd64 1:9.11.3+dfsg-1ubuntu1.14 [238 kB][0m
+[0;32m    ubuntu_1804_template: Get:77 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgssapi-krb5-2 amd64 1.16-2ubuntu0.2 [122 kB][0m
+[0;32m    ubuntu_1804_template: Get:78 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5-3 amd64 1.16-2ubuntu0.2 [279 kB][0m
+[0;32m    ubuntu_1804_template: Get:79 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5support0 amd64 1.16-2ubuntu0.2 [30.8 kB][0m
+[0;32m    ubuntu_1804_template: Get:80 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libk5crypto3 amd64 1.16-2ubuntu0.2 [85.5 kB][0m
+[0;32m    ubuntu_1804_template: Get:81 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblwres160 amd64 1:9.11.3+dfsg-1ubuntu1.14 [34.6 kB][0m
+[0;32m    ubuntu_1804_template: Get:82 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 busybox-static amd64 1:1.27.2-2ubuntu3.3 [918 kB][0m
+[0;32m    ubuntu_1804_template: Get:83 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 krb5-locales all 1.16-2ubuntu0.2 [13.4 kB][0m
+[0;32m    ubuntu_1804_template: Get:84 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpcap0.8 amd64 1.8.1-6ubuntu1.18.04.2 [118 kB][0m
+[0;32m    ubuntu_1804_template: Get:85 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.0.0 amd64 1.0.2n-1ubuntu5.6 [1,089 kB][0m
+[0;32m    ubuntu_1804_template: Get:86 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libx11-data all 2:1.6.4-3ubuntu0.3 [114 kB][0m
+[0;32m    ubuntu_1804_template: Get:87 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libx11-6 amd64 2:1.6.4-3ubuntu0.3 [571 kB][0m
+[0;32m    ubuntu_1804_template: Get:88 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 lshw amd64 02.18-0.1ubuntu6.18.04.2 [234 kB][0m
+[0;32m    ubuntu_1804_template: Get:89 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 multiarch-support amd64 2.27-3ubuntu1.4 [6,944 B][0m
+[0;32m    ubuntu_1804_template: Get:90 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python-apt-common all 1.6.5ubuntu0.5 [16.9 kB][0m
+[0;32m    ubuntu_1804_template: Get:91 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-apt amd64 1.6.5ubuntu0.5 [149 kB][0m
+[0;32m    ubuntu_1804_template: Get:92 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ubuntu-release-upgrader-core all 1:18.04.42 [25.9 kB][0m
+[0;32m    ubuntu_1804_template: Get:93 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-distupgrade all 1:18.04.42 [106 kB][0m
+[0;32m    ubuntu_1804_template: Get:94 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ubuntu-standard amd64 1.417.5 [2,680 B][0m
+[0;32m    ubuntu_1804_template: Get:95 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-firmware all 1.173.20 [74.8 MB][0m
+[0;32m    ubuntu_1804_template: Get:96 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-modules-4.15.0-140-generic amd64 4.15.0-140.144 [13.1 MB][0m
+[0;32m    ubuntu_1804_template: Get:97 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-image-4.15.0-140-generic amd64 4.15.0-140.144 [8,021 kB][0m
+[0;32m    ubuntu_1804_template: Get:98 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-modules-extra-4.15.0-140-generic amd64 4.15.0-140.144 [32.8 MB][0m
+[0;32m    ubuntu_1804_template: Get:99 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 intel-microcode amd64 3.20201110.0ubuntu0.18.04.2 [2,742 kB][0m
+[0;32m    ubuntu_1804_template: Get:100 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-generic amd64 4.15.0.140.127 [1,868 B][0m
+[0;32m    ubuntu_1804_template: Get:101 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-image-generic amd64 4.15.0.140.127 [2,580 B][0m
+[0;32m    ubuntu_1804_template: Get:102 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-headers-4.15.0-140 all 4.15.0-140.144 [10.9 MB][0m
+[0;32m    ubuntu_1804_template: Get:103 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-headers-4.15.0-140-generic amd64 4.15.0-140.144 [1,101 kB][0m
+[0;32m    ubuntu_1804_template: Get:104 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-headers-generic amd64 4.15.0.140.127 [2,484 B][0m
+[0;32m    ubuntu_1804_template: Get:105 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 wireless-regdb all 2020.11.20-0ubuntu1~18.04.1 [10.3 kB][0m
+[1;31m==> ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[1;31m==> ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[1;31m==> ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[1;31m==> ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[1;31m==> ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7, <> line 105.)[0m
+[1;31m==> ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[1;31m==> ubuntu_1804_template: dpkg-preconfigure: unable to re-open stdin:[0m
+[0;32m    ubuntu_1804_template: Fetched 178 MB in 4s (49.2 MB/s)[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59186 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libc6_2.27-3ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: Unpacking libc6:amd64 (2.27-3ubuntu1.4) over (2.27-3ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libc6:amd64 (2.27-3ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59186 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../base-files_10.1ubuntu2.10_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Warning: Stopping motd-news.service, but it can still be activated by:[0m
+[0;32m    ubuntu_1804_template:   motd-news.timer[0m
+[0;32m    ubuntu_1804_template: Unpacking base-files (10.1ubuntu2.10) over (10.1ubuntu2.9) ...[0m
+[0;32m    ubuntu_1804_template: Setting up base-files (10.1ubuntu2.10) ...[0m
+[0;32m    ubuntu_1804_template: Installing new version of config file /etc/update-motd.d/50-motd-news ...[0m
+[0;32m    ubuntu_1804_template: motd-news.service is a disabled or a static unit, not starting it.[0m
+[0;32m    ubuntu_1804_template: Removing obsolete conffile /etc/default/motd-news ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../bsdutils_1%3a2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking bsdutils (1:2.31.1-0.4ubuntu3.7) over (1:2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up bsdutils (1:2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../perl-base_5.26.1-6ubuntu0.5_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking perl-base (5.26.1-6ubuntu0.5) over (5.26.1-6ubuntu0.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up perl-base (5.26.1-6ubuntu0.5) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../tar_1.29b-2ubuntu0.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking tar (1.29b-2ubuntu0.2) over (1.29b-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up tar (1.29b-2ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libuuid1_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libuuid1:amd64 (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libuuid1:amd64 (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libblkid1_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libblkid1:amd64 (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libblkid1:amd64 (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libfdisk1_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libfdisk1:amd64 (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libfdisk1:amd64 (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libmount1_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libmount1:amd64 (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libmount1:amd64 (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libsmartcols1_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libsmartcols1:amd64 (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libsmartcols1:amd64 (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../fdisk_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking fdisk (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up fdisk (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../util-linux_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking util-linux (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up util-linux (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../locales_2.27-3ubuntu1.4_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking locales (2.27-3ubuntu1.4) over (2.27-3ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libc-bin_2.27-3ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libc-bin (2.27-3ubuntu1.4) over (2.27-3ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libc-bin (2.27-3ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libnss-systemd_237-3ubuntu10.45_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libnss-systemd:amd64 (237-3ubuntu10.45) over (237-3ubuntu10.42) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libsystemd0_237-3ubuntu10.45_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libsystemd0:amd64 (237-3ubuntu10.45) over (237-3ubuntu10.42) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libsystemd0:amd64 (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libpam-systemd_237-3ubuntu10.45_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libpam-systemd:amd64 (237-3ubuntu10.45) over (237-3ubuntu10.42) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../systemd_237-3ubuntu10.45_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking systemd (237-3ubuntu10.45) over (237-3ubuntu10.42) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../udev_237-3ubuntu10.45_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking udev (237-3ubuntu10.45) over (237-3ubuntu10.42) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libudev1_237-3ubuntu10.45_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libudev1:amd64 (237-3ubuntu10.45) over (237-3ubuntu10.42) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libudev1:amd64 (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libaudit-common_1%3a2.8.2-1ubuntu1.1_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libaudit-common (1:2.8.2-1ubuntu1.1) over (1:2.8.2-1ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libaudit-common (1:2.8.2-1ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libaudit1_1%3a2.8.2-1ubuntu1.1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libaudit1:amd64 (1:2.8.2-1ubuntu1.1) over (1:2.8.2-1ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libaudit1:amd64 (1:2.8.2-1ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libpam0g_1.1.8-3.6ubuntu2.18.04.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libpam0g:amd64 (1.1.8-3.6ubuntu2.18.04.2) over (1.1.8-3.6ubuntu2.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpam0g:amd64 (1.1.8-3.6ubuntu2.18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libpam-modules-bin_1.1.8-3.6ubuntu2.18.04.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libpam-modules-bin (1.1.8-3.6ubuntu2.18.04.2) over (1.1.8-3.6ubuntu2.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpam-modules-bin (1.1.8-3.6ubuntu2.18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libpam-modules_1.1.8-3.6ubuntu2.18.04.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: Unpacking libpam-modules:amd64 (1.1.8-3.6ubuntu2.18.04.2) over (1.1.8-3.6ubuntu2.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpam-modules:amd64 (1.1.8-3.6ubuntu2.18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libpam-runtime_1.1.8-3.6ubuntu2.18.04.2_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libpam-runtime (1.1.8-3.6ubuntu2.18.04.2) over (1.1.8-3.6ubuntu2.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpam-runtime (1.1.8-3.6ubuntu2.18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../friendly-recovery_0.2.38ubuntu1.2_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking friendly-recovery (0.2.38ubuntu1.2) over (0.2.38ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../initramfs-tools_0.130ubuntu3.11_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking initramfs-tools (0.130ubuntu3.11) over (0.130ubuntu3.9) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../initramfs-tools-core_0.130ubuntu3.11_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking initramfs-tools-core (0.130ubuntu3.11) over (0.130ubuntu3.9) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../initramfs-tools-bin_0.130ubuntu3.11_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking initramfs-tools-bin (0.130ubuntu3.11) over (0.130ubuntu3.9) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../busybox-initramfs_1%3a1.27.2-2ubuntu3.3_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking busybox-initramfs (1:1.27.2-2ubuntu3.3) over (1:1.27.2-2ubuntu3.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up systemd (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: Installing new version of config file /etc/dhcp/dhclient-enter-hooks.d/resolved ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../systemd-sysv_237-3ubuntu10.45_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking systemd-sysv (237-3ubuntu10.45) over (237-3ubuntu10.42) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libcryptsetup12_2%3a2.0.2-1ubuntu1.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libcryptsetup12:amd64 (2:2.0.2-1ubuntu1.2) over (2:2.0.2-1ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../mount_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking mount (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libzstd1_1.3.3+dfsg-2ubuntu1.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libzstd1:amd64 (1.3.3+dfsg-2ubuntu1.2) over (1.3.3+dfsg-2ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libzstd1:amd64 (1.3.3+dfsg-2ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libapt-pkg5.0_1.6.13_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libapt-pkg5.0:amd64 (1.6.13) over (1.6.12ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libapt-pkg5.0:amd64 (1.6.13) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../libapt-inst2.0_1.6.13_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libapt-inst2.0:amd64 (1.6.13) over (1.6.12ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../archives/apt_1.6.13_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking apt (1.6.13) over (1.6.12ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up apt (1.6.13) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../apt-utils_1.6.13_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking apt-utils (1.6.13) over (1.6.12ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../gpgv_2.2.4-1ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking gpgv (2.2.4-1ubuntu1.4) over (2.2.4-1ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up gpgv (2.2.4-1ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../ubuntu-keyring_2018.09.18.1~18.04.2_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking ubuntu-keyring (2018.09.18.1~18.04.2) over (2018.09.18.1~18.04.0) ...[0m
+[0;32m    ubuntu_1804_template: Setting up ubuntu-keyring (2018.09.18.1~18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../0-libssl1.1_1.1.1-1ubuntu2.1~18.04.9_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.9) over (1.1.1-1ubuntu2.1~18.04.6) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../1-python3.6_3.6.9-1~18.04ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking python3.6 (3.6.9-1~18.04ubuntu1.4) over (3.6.9-1~18.04ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../2-libpython3.6-stdlib_3.6.9-1~18.04ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libpython3.6-stdlib:amd64 (3.6.9-1~18.04ubuntu1.4) over (3.6.9-1~18.04ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../3-python3.6-minimal_3.6.9-1~18.04ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking python3.6-minimal (3.6.9-1~18.04ubuntu1.4) over (3.6.9-1~18.04ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../4-libpython3.6-minimal_3.6.9-1~18.04ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libpython3.6-minimal:amd64 (3.6.9-1~18.04ubuntu1.4) over (3.6.9-1~18.04ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../5-uuid-runtime_2.31.1-0.4ubuntu3.7_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking uuid-runtime (2.31.1-0.4ubuntu3.7) over (2.31.1-0.4ubuntu3.6) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../6-libp11-kit0_0.23.9-2ubuntu0.1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libp11-kit0:amd64 (0.23.9-2ubuntu0.1) over (0.23.9-2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libp11-kit0:amd64 (0.23.9-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 59185 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../00-distro-info-data_0.37ubuntu0.9_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking distro-info-data (0.37ubuntu0.9) over (0.37ubuntu0.7) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../01-iproute2_4.15.0-2ubuntu1.3_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking iproute2 (4.15.0-2ubuntu1.3) over (4.15.0-2ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../02-libisc-export169_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libisc-export169:amd64 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../03-libdns-export1100_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libdns-export1100 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../04-isc-dhcp-client_4.3.5-3ubuntu7.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking isc-dhcp-client (4.3.5-3ubuntu7.2) over (4.3.5-3ubuntu7.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../05-isc-dhcp-common_4.3.5-3ubuntu7.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking isc-dhcp-common (4.3.5-3ubuntu7.2) over (4.3.5-3ubuntu7.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../06-libglib2.0-0_2.56.4-0ubuntu0.18.04.8_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libglib2.0-0:amd64 (2.56.4-0ubuntu0.18.04.8) over (2.56.4-0ubuntu0.18.04.6) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../07-libglib2.0-data_2.56.4-0ubuntu0.18.04.8_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libglib2.0-data (2.56.4-0ubuntu0.18.04.8) over (2.56.4-0ubuntu0.18.04.6) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../08-libnetplan0_0.99-0ubuntu3~18.04.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libnetplan0:amd64 (0.99-0ubuntu3~18.04.4) over (0.99-0ubuntu3~18.04.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../09-netplan.io_0.99-0ubuntu3~18.04.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking netplan.io (0.99-0ubuntu3~18.04.4) over (0.99-0ubuntu3~18.04.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../10-nplan_0.99-0ubuntu3~18.04.4_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking nplan (0.99-0ubuntu3~18.04.4) over (0.99-0ubuntu3~18.04.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../11-openssl_1.1.1-1ubuntu2.1~18.04.9_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking openssl (1.1.1-1ubuntu2.1~18.04.9) over (1.1.1-1ubuntu2.1~18.04.6) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../12-sudo_1.8.21p2-3ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking sudo (1.8.21p2-3ubuntu1.4) over (1.8.21p2-3ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../13-tzdata_2021a-0ubuntu0.18.04_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking tzdata (2021a-0ubuntu0.18.04) over (2020a-0ubuntu0.18.04) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../14-xxd_2%3a8.0.1453-1ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking xxd (2:8.0.1453-1ubuntu1.4) over (2:8.0.1453-1ubuntu1.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../15-vim-tiny_2%3a8.0.1453-1ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking vim-tiny (2:8.0.1453-1ubuntu1.4) over (2:8.0.1453-1ubuntu1.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../16-vim-common_2%3a8.0.1453-1ubuntu1.4_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking vim-common (2:8.0.1453-1ubuntu1.4) over (2:8.0.1453-1ubuntu1.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../17-ubuntu-minimal_1.417.5_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking ubuntu-minimal (1.417.5) over (1.417.4) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../18-accountsservice_0.6.45-1ubuntu1.3_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking accountsservice (0.6.45-1ubuntu1.3) over (0.6.45-1ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../19-libaccountsservice0_0.6.45-1ubuntu1.3_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libaccountsservice0:amd64 (0.6.45-1ubuntu1.3) over (0.6.45-1ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../20-libirs160_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libirs160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../21-bind9-host_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking bind9-host (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../22-dnsutils_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking dnsutils (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../23-libbind9-160_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libbind9-160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../24-libisccfg160_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libisccfg160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../25-libisccc160_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libisccc160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../26-libdns1100_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libdns1100:amd64 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../27-libisc169_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libisc169:amd64 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../28-libgssapi-krb5-2_1.16-2ubuntu0.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libgssapi-krb5-2:amd64 (1.16-2ubuntu0.2) over (1.16-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../29-libkrb5-3_1.16-2ubuntu0.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libkrb5-3:amd64 (1.16-2ubuntu0.2) over (1.16-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../30-libkrb5support0_1.16-2ubuntu0.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libkrb5support0:amd64 (1.16-2ubuntu0.2) over (1.16-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../31-libk5crypto3_1.16-2ubuntu0.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libk5crypto3:amd64 (1.16-2ubuntu0.2) over (1.16-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../32-liblwres160_1%3a9.11.3+dfsg-1ubuntu1.14_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking liblwres160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) over (1:9.11.3+dfsg-1ubuntu1.12) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../33-busybox-static_1%3a1.27.2-2ubuntu3.3_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking busybox-static (1:1.27.2-2ubuntu3.3) over (1:1.27.2-2ubuntu3.2) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../34-krb5-locales_1.16-2ubuntu0.2_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking krb5-locales (1.16-2ubuntu0.2) over (1.16-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../35-libpcap0.8_1.8.1-6ubuntu1.18.04.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libpcap0.8:amd64 (1.8.1-6ubuntu1.18.04.2) over (1.8.1-6ubuntu1.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../36-libssl1.0.0_1.0.2n-1ubuntu5.6_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libssl1.0.0:amd64 (1.0.2n-1ubuntu5.6) over (1.0.2n-1ubuntu5.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../37-libx11-data_2%3a1.6.4-3ubuntu0.3_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libx11-data (2:1.6.4-3ubuntu0.3) over (2:1.6.4-3ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../38-libx11-6_2%3a1.6.4-3ubuntu0.3_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libx11-6:amd64 (2:1.6.4-3ubuntu0.3) over (2:1.6.4-3ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../39-lshw_02.18-0.1ubuntu6.18.04.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking lshw (02.18-0.1ubuntu6.18.04.2) over (02.18-0.1ubuntu6.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../40-multiarch-support_2.27-3ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking multiarch-support (2.27-3ubuntu1.4) over (2.27-3ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../41-python-apt-common_1.6.5ubuntu0.5_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking python-apt-common (1.6.5ubuntu0.5) over (1.6.5ubuntu0.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../42-python3-apt_1.6.5ubuntu0.5_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking python3-apt (1.6.5ubuntu0.5) over (1.6.5ubuntu0.3) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../43-ubuntu-release-upgrader-core_1%3a18.04.42_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking ubuntu-release-upgrader-core (1:18.04.42) over (1:18.04.38) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../44-python3-distupgrade_1%3a18.04.42_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking python3-distupgrade (1:18.04.42) over (1:18.04.38) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../45-ubuntu-standard_1.417.5_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking ubuntu-standard (1.417.5) over (1.417.4) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../46-linux-firmware_1.173.20_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-firmware (1.173.20) over (1.173.19) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package linux-modules-4.15.0-140-generic.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../47-linux-modules-4.15.0-140-generic_4.15.0-140.144_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-modules-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package linux-image-4.15.0-140-generic.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../48-linux-image-4.15.0-140-generic_4.15.0-140.144_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-image-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package linux-modules-extra-4.15.0-140-generic.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../49-linux-modules-extra-4.15.0-140-generic_4.15.0-140.144_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-modules-extra-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../50-intel-microcode_3.20201110.0ubuntu0.18.04.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking intel-microcode (3.20201110.0ubuntu0.18.04.2) over (3.20200609.0ubuntu0.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../51-linux-generic_4.15.0.140.127_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-generic (4.15.0.140.127) over (4.15.0.112.100) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../52-linux-image-generic_4.15.0.140.127_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-image-generic (4.15.0.140.127) over (4.15.0.112.100) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package linux-headers-4.15.0-140.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../53-linux-headers-4.15.0-140_4.15.0-140.144_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-headers-4.15.0-140 (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package linux-headers-4.15.0-140-generic.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../54-linux-headers-4.15.0-140-generic_4.15.0-140.144_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-headers-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../55-linux-headers-generic_4.15.0.140.127_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking linux-headers-generic (4.15.0.140.127) over (4.15.0.112.100) ...[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../56-wireless-regdb_2020.11.20-0ubuntu1~18.04.1_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking wireless-regdb (2020.11.20-0ubuntu1~18.04.1) over (2018.05.09-0ubuntu1~18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up python-apt-common (1.6.5ubuntu0.5) ...[0m
+[0;32m    ubuntu_1804_template: Setting up intel-microcode (3.20201110.0ubuntu0.18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: update-initramfs: deferring update (trigger activated)[0m
+[0;32m    ubuntu_1804_template: intel-microcode: microcode will be updated at next boot[0m
+[0;32m    ubuntu_1804_template: Setting up libapt-inst2.0:amd64 (1.6.13) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libnss-systemd:amd64 (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: Setting up python3-apt (1.6.5ubuntu0.5) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libcryptsetup12:amd64 (2:2.0.2-1ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libssl1.0.0:amd64 (1.0.2n-1ubuntu5.6) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: Setting up xxd (2:8.0.1453-1ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up sudo (1.8.21p2-3ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up isc-dhcp-common (4.3.5-3ubuntu7.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up apt-utils (1.6.13) ...[0m
+[0;32m    ubuntu_1804_template: Setting up multiarch-support (2.27-3ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up tzdata (2021a-0ubuntu0.18.04) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template:[0m
+[0;32m    ubuntu_1804_template: Current default time zone: 'Europe/Paris'[0m
+[0;32m    ubuntu_1804_template: Local time is now:      Mon Apr 12 11:10:41 CEST 2021.[0m
+[0;32m    ubuntu_1804_template: Universal Time is now:  Mon Apr 12 09:10:41 UTC 2021.[0m
+[0;32m    ubuntu_1804_template: Run 'dpkg-reconfigure tzdata' if you wish to change it.[0m
+[0;32m    ubuntu_1804_template:[0m
+[0;32m    ubuntu_1804_template: Setting up systemd-sysv (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libglib2.0-0:amd64 (2.56.4-0ubuntu0.18.04.8) ...[0m
+[0;32m    ubuntu_1804_template: No schema files found: doing nothing.[0m
+[0;32m    ubuntu_1804_template: Setting up linux-headers-4.15.0-140 (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Setting up mount (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: Setting up linux-modules-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Setting up distro-info-data (0.37ubuntu0.9) ...[0m
+[0;32m    ubuntu_1804_template: Setting up wireless-regdb (2020.11.20-0ubuntu1~18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up linux-image-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: I: /vmlinuz is now a symlink to boot/vmlinuz-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template: I: /initrd.img is now a symlink to boot/initrd.img-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template: Setting up linux-modules-extra-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Setting up lshw (02.18-0.1ubuntu6.18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up iproute2 (4.15.0-2ubuntu1.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libkrb5support0:amd64 (1.16-2ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up uuid-runtime (2.31.1-0.4ubuntu3.7) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libaccountsservice0:amd64 (0.6.45-1ubuntu1.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up busybox-initramfs (1:1.27.2-2ubuntu3.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libglib2.0-data (2.56.4-0ubuntu0.18.04.8) ...[0m
+[0;32m    ubuntu_1804_template: Setting up krb5-locales (1.16-2ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up udev (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: update-initramfs: deferring update (trigger activated)[0m
+[0;32m    ubuntu_1804_template: Setting up libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.9) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: Setting up openssl (1.1.1-1ubuntu2.1~18.04.9) ...[0m
+[0;32m    ubuntu_1804_template: Setting up vim-common (2:8.0.1453-1ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up busybox-static (1:1.27.2-2ubuntu3.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up initramfs-tools-bin (0.130ubuntu3.11) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libnetplan0:amd64 (0.99-0ubuntu3~18.04.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up accountsservice (0.6.45-1ubuntu1.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up friendly-recovery (0.2.38ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Sourcing file `/etc/default/grub'[0m
+[0;32m    ubuntu_1804_template: Generating grub configuration file ...[0m
+[0;32m    ubuntu_1804_template: Found linux image: /boot/vmlinuz-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template: Found linux image: /boot/vmlinuz-4.15.0-112-generic[0m
+[0;32m    ubuntu_1804_template: Found initrd image: /boot/initrd.img-4.15.0-112-generic[0m
+[0;32m    ubuntu_1804_template: done[0m
+[0;32m    ubuntu_1804_template: Setting up locales (2.27-3ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: Generating locales (this might take a while)...[0m
+[0;32m    ubuntu_1804_template:   en_AG.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_AU.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_BW.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_CA.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_DK.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_GB.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_HK.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_IE.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_IL.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_IN.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_NG.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_NZ.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_PH.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_SG.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_US.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_ZA.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_ZM.UTF-8... done[0m
+[0;32m    ubuntu_1804_template:   en_ZW.UTF-8... done[0m
+[0;32m    ubuntu_1804_template: Generation complete.[0m
+[0;32m    ubuntu_1804_template: Setting up linux-firmware (1.173.20) ...[0m
+[0;32m    ubuntu_1804_template: update-initramfs: Generating /boot/initrd.img-4.15.0-112-generic[0m
+[0;32m    ubuntu_1804_template: Setting up liblwres160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libx11-data (2:1.6.4-3ubuntu0.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up python3-distupgrade (1:18.04.42) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpcap0.8:amd64 (1.8.1-6ubuntu1.18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up vim-tiny (2:8.0.1453-1ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libisc169:amd64 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libk5crypto3:amd64 (1.16-2ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libisccc160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up linux-headers-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpam-systemd:amd64 (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: Setting up initramfs-tools-core (0.130ubuntu3.11) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libisc-export169:amd64 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libx11-6:amd64 (2:1.6.4-3ubuntu0.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up initramfs-tools (0.130ubuntu3.11) ...[0m
+[0;32m    ubuntu_1804_template: update-initramfs: deferring update (trigger activated)[0m
+[0;32m    ubuntu_1804_template: Setting up netplan.io (0.99-0ubuntu3~18.04.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up ubuntu-release-upgrader-core (1:18.04.42) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpython3.6-minimal:amd64 (3.6.9-1~18.04ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up nplan (0.99-0ubuntu3~18.04.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libdns-export1100 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libkrb5-3:amd64 (1.16-2ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up linux-image-generic (4.15.0.140.127) ...[0m
+[0;32m    ubuntu_1804_template: Setting up linux-headers-generic (4.15.0.140.127) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpython3.6-stdlib:amd64 (3.6.9-1~18.04ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up python3.6-minimal (3.6.9-1~18.04ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up isc-dhcp-client (4.3.5-3ubuntu7.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libgssapi-krb5-2:amd64 (1.16-2ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up linux-generic (4.15.0.140.127) ...[0m
+[0;32m    ubuntu_1804_template: Setting up ubuntu-minimal (1.417.5) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libdns1100:amd64 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up python3.6 (3.6.9-1~18.04ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libisccfg160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libirs160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libbind9-160:amd64 (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up bind9-host (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up dnsutils (1:9.11.3+dfsg-1ubuntu1.14) ...[0m
+[0;32m    ubuntu_1804_template: Setting up ubuntu-standard (1.417.5) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for ureadahead (0.100.0-21) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for install-info (6.5.0.dfsg.1-2) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for plymouth-theme-ubuntu-text (0.9.3-1ubuntu7.18.04.2) ...[0m
+[0;32m    ubuntu_1804_template: update-initramfs: deferring update (trigger activated)[0m
+[0;32m    ubuntu_1804_template: Processing triggers for libc-bin (2.27-3ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for systemd (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for dbus (1.12.2-1ubuntu1.2) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for mime-support (3.60ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for linux-image-4.15.0-140-generic (4.15.0-140.144) ...[0m
+[0;32m    ubuntu_1804_template: /etc/kernel/postinst.d/initramfs-tools:[0m
+[0;32m    ubuntu_1804_template: update-initramfs: Generating /boot/initrd.img-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template: /etc/kernel/postinst.d/zz-update-grub:[0m
+[0;32m    ubuntu_1804_template: Sourcing file `/etc/default/grub'[0m
+[0;32m    ubuntu_1804_template: Generating grub configuration file ...[0m
+[0;32m    ubuntu_1804_template: Found linux image: /boot/vmlinuz-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template: Found initrd image: /boot/initrd.img-4.15.0-140-generic[0m
+[0;32m    ubuntu_1804_template: Found linux image: /boot/vmlinuz-4.15.0-112-generic[0m
+[0;32m    ubuntu_1804_template: Found initrd image: /boot/initrd.img-4.15.0-112-generic[0m
+[0;32m    ubuntu_1804_template: done[0m
+[0;32m    ubuntu_1804_template: Processing triggers for initramfs-tools (0.130ubuntu3.11) ...[0m
+[0;32m    ubuntu_1804_template: update-initramfs: Generating /boot/initrd.img-4.15.0-140-generic[0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.[0m
+[1;31m==> ubuntu_1804_template:[0m
+[0;32m    ubuntu_1804_template: Reading package lists...[0m
+[0;32m    ubuntu_1804_template: Building dependency tree...[0m
+[0;32m    ubuntu_1804_template: Reading state information...[0m
+[0;32m    ubuntu_1804_template: The following additional packages will be installed:[0m
+[0;32m    ubuntu_1804_template:   ethtool ifupdown libdaemon0 libgpm2 libmspack0 libpython3.6 libxmlsec1[0m
+[0;32m    ubuntu_1804_template:   libxmlsec1-openssl libxslt1.1 vim-runtime zerofree[0m
+[0;32m    ubuntu_1804_template: Suggested packages:[0m
+[0;32m    ubuntu_1804_template:   wpasupplicant ppp rdnssd gpm open-vm-tools-desktop cloud-init ctags vim-doc[0m
+[0;32m    ubuntu_1804_template:   vim-scripts[0m
+[0;32m    ubuntu_1804_template: The following NEW packages will be installed:[0m
+[0;32m    ubuntu_1804_template:   ethtool htop ifplugd ifupdown libdaemon0 libgpm2 libmspack0 libpython3.6[0m
+[0;32m    ubuntu_1804_template:   libxmlsec1 libxmlsec1-openssl libxslt1.1 net-tools open-vm-tools resolvconf[0m
+[0;32m    ubuntu_1804_template:   vim vim-runtime zerofree[0m
+[0;32m    ubuntu_1804_template: 0 upgraded, 17 newly installed, 0 to remove and 0 not upgraded.[0m
+[0;32m    ubuntu_1804_template: Need to get 9,524 kB of archives.[0m
+[0;32m    ubuntu_1804_template: After this operation, 42.4 MB of additional disk space will be used.[0m
+[0;32m    ubuntu_1804_template: Get:1 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 libdaemon0 amd64 0.14-6 [16.6 kB][0m
+[0;32m    ubuntu_1804_template: Get:2 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 ethtool amd64 1:4.15-0ubuntu1 [114 kB][0m
+[0;32m    ubuntu_1804_template: Get:3 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 htop amd64 2.1.0-3 [80.0 kB][0m
+[0;32m    ubuntu_1804_template: Get:4 http://fr.archive.ubuntu.com/ubuntu bionic/universe amd64 ifplugd amd64 0.28-19.2 [60.9 kB][0m
+[0;32m    ubuntu_1804_template: Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ifupdown amd64 0.8.17ubuntu1.1 [55.9 kB][0m
+[0;32m    ubuntu_1804_template: Get:6 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 libgpm2 amd64 1.20.7-5 [15.1 kB][0m
+[0;32m    ubuntu_1804_template: Get:7 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmspack0 amd64 0.6-3ubuntu0.3 [37.5 kB][0m
+[0;32m    ubuntu_1804_template: Get:8 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6 amd64 3.6.9-1~18.04ubuntu1.4 [1,414 kB][0m
+[0;32m    ubuntu_1804_template: Get:9 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libxslt1.1 amd64 1.1.29-5ubuntu0.2 [150 kB][0m
+[0;32m    ubuntu_1804_template: Get:10 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 libxmlsec1 amd64 1.2.25-1build1 [125 kB][0m
+[0;32m    ubuntu_1804_template: Get:11 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 libxmlsec1-openssl amd64 1.2.25-1build1 [73.6 kB][0m
+[0;32m    ubuntu_1804_template: Get:12 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 net-tools amd64 1.60+git20161116.90da8a0-1ubuntu1 [194 kB][0m
+[0;32m    ubuntu_1804_template: Get:13 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 vim-runtime all 2:8.0.1453-1ubuntu1.4 [5,435 kB][0m
+[0;32m    ubuntu_1804_template: Get:14 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 vim amd64 2:8.0.1453-1ubuntu1.4 [1,152 kB][0m
+[0;32m    ubuntu_1804_template: Get:15 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 open-vm-tools amd64 2:11.0.5-4ubuntu0.18.04.1 [543 kB][0m
+[0;32m    ubuntu_1804_template: Get:16 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 resolvconf all 1.79ubuntu10.18.04.3 [48.0 kB][0m
+[0;32m    ubuntu_1804_template: Get:17 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 zerofree amd64 1.0.4-1 [8,112 B][0m
+[1;31m==> ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[1;31m==> ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[1;31m==> ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[1;31m==> ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[1;31m==> ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7, <> line 17.)[0m
+[1;31m==> ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[1;31m==> ubuntu_1804_template: dpkg-preconfigure: unable to re-open stdin:[0m
+[0;32m    ubuntu_1804_template: Fetched 9,524 kB in 0s (33.8 MB/s)[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package libdaemon0:amd64.[0m
+[0;32m    ubuntu_1804_template: (Reading database ... 94723 files and directories currently installed.)[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../00-libdaemon0_0.14-6_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libdaemon0:amd64 (0.14-6) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package ethtool.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../01-ethtool_1%3a4.15-0ubuntu1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking ethtool (1:4.15-0ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package htop.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../02-htop_2.1.0-3_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking htop (2.1.0-3) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package ifplugd.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../03-ifplugd_0.28-19.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking ifplugd (0.28-19.2) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package ifupdown.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../04-ifupdown_0.8.17ubuntu1.1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking ifupdown (0.8.17ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package libgpm2:amd64.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../05-libgpm2_1.20.7-5_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libgpm2:amd64 (1.20.7-5) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package libmspack0:amd64.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../06-libmspack0_0.6-3ubuntu0.3_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libmspack0:amd64 (0.6-3ubuntu0.3) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package libpython3.6:amd64.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../07-libpython3.6_3.6.9-1~18.04ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libpython3.6:amd64 (3.6.9-1~18.04ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package libxslt1.1:amd64.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../08-libxslt1.1_1.1.29-5ubuntu0.2_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libxslt1.1:amd64 (1.1.29-5ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package libxmlsec1:amd64.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../09-libxmlsec1_1.2.25-1build1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libxmlsec1:amd64 (1.2.25-1build1) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package libxmlsec1-openssl:amd64.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../10-libxmlsec1-openssl_1.2.25-1build1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking libxmlsec1-openssl:amd64 (1.2.25-1build1) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package net-tools.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../11-net-tools_1.60+git20161116.90da8a0-1ubuntu1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking net-tools (1.60+git20161116.90da8a0-1ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package vim-runtime.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../12-vim-runtime_2%3a8.0.1453-1ubuntu1.4_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Adding 'diversion of /usr/share/vim/vim80/doc/help.txt to /usr/share/vim/vim80/doc/help.txt.vim-tiny by vim-runtime'[0m
+[0;32m    ubuntu_1804_template: Adding 'diversion of /usr/share/vim/vim80/doc/tags to /usr/share/vim/vim80/doc/tags.vim-tiny by vim-runtime'[0m
+[0;32m    ubuntu_1804_template: Unpacking vim-runtime (2:8.0.1453-1ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package vim.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../13-vim_2%3a8.0.1453-1ubuntu1.4_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking vim (2:8.0.1453-1ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package open-vm-tools.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../14-open-vm-tools_2%3a11.0.5-4ubuntu0.18.04.1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking open-vm-tools (2:11.0.5-4ubuntu0.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package resolvconf.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../15-resolvconf_1.79ubuntu10.18.04.3_all.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking resolvconf (1.79ubuntu10.18.04.3) ...[0m
+[0;32m    ubuntu_1804_template: Selecting previously unselected package zerofree.[0m
+[0;32m    ubuntu_1804_template: Preparing to unpack .../16-zerofree_1.0.4-1_amd64.deb ...[0m
+[0;32m    ubuntu_1804_template: Unpacking zerofree (1.0.4-1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up zerofree (1.0.4-1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libdaemon0:amd64 (0.14-6) ...[0m
+[0;32m    ubuntu_1804_template: Setting up ifupdown (0.8.17ubuntu1.1) ...[0m
+[0;32m    ubuntu_1804_template: Created symlink /etc/systemd/system/multi-user.target.wants/networking.service → /lib/systemd/system/networking.service.[0m
+[0;32m    ubuntu_1804_template: Created symlink /etc/systemd/system/network-online.target.wants/networking.service → /lib/systemd/system/networking.service.[0m
+[0;32m    ubuntu_1804_template: Setting up libmspack0:amd64 (0.6-3ubuntu0.3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libgpm2:amd64 (1.20.7-5) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libxslt1.1:amd64 (1.1.29-5ubuntu0.2) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libxmlsec1:amd64 (1.2.25-1build1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up resolvconf (1.79ubuntu10.18.04.3) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: Created symlink /etc/systemd/system/sysinit.target.wants/resolvconf.service → /lib/systemd/system/resolvconf.service.[0m
+[0;32m    ubuntu_1804_template: Created symlink /etc/systemd/system/systemd-resolved.service.wants/resolvconf-pull-resolved.path → /lib/systemd/system/resolvconf-pull-resolved.path.[0m
+[0;32m    ubuntu_1804_template: resolvconf-pull-resolved.service is a disabled or a static unit, not starting it.[0m
+[0;32m    ubuntu_1804_template: resolvconf-pull-resolved.service is a disabled or a static unit, not starting it.[0m
+[0;32m    ubuntu_1804_template: Setting up vim-runtime (2:8.0.1453-1ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up ethtool (1:4.15-0ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up htop (2.1.0-3) ...[0m
+[0;32m    ubuntu_1804_template: Setting up net-tools (1.60+git20161116.90da8a0-1ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up libpython3.6:amd64 (3.6.9-1~18.04ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Setting up ifplugd (0.28-19.2) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: Setting up libxmlsec1-openssl:amd64 (1.2.25-1build1) ...[0m
+[0;32m    ubuntu_1804_template: Setting up vim (2:8.0.1453-1ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode[0m
+[0;32m    ubuntu_1804_template: update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode[0m
+[0;32m    ubuntu_1804_template: update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode[0m
+[0;32m    ubuntu_1804_template: update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode[0m
+[0;32m    ubuntu_1804_template: update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode[0m
+[0;32m    ubuntu_1804_template: update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode[0m
+[0;32m    ubuntu_1804_template: update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode[0m
+[0;32m    ubuntu_1804_template: Setting up open-vm-tools (2:11.0.5-4ubuntu0.18.04.1) ...[0m
+[0;32m    ubuntu_1804_template: Created symlink /etc/systemd/system/vmtoolsd.service → /lib/systemd/system/open-vm-tools.service.[0m
+[0;32m    ubuntu_1804_template: Created symlink /etc/systemd/system/multi-user.target.wants/open-vm-tools.service → /lib/systemd/system/open-vm-tools.service.[0m
+[0;32m    ubuntu_1804_template: Created symlink /etc/systemd/system/open-vm-tools.service.requires/vgauth.service → /lib/systemd/system/vgauth.service.[0m
+[0;32m    ubuntu_1804_template: Processing triggers for systemd (237-3ubuntu10.45) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for mime-support (3.60ubuntu1) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for ureadahead (0.100.0-21) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for libc-bin (2.27-3ubuntu1.4) ...[0m
+[0;32m    ubuntu_1804_template: Processing triggers for resolvconf (1.79ubuntu10.18.04.3) ...[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    ubuntu_1804_template: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: unable to initialize frontend: Readline[0m
+[0;32m    ubuntu_1804_template: debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)[0m
+[0;32m    ubuntu_1804_template: debconf: falling back to frontend: Teletype[0m
+[0;32m    ubuntu_1804_template: alias ll="ls -la" >> $HOME/.bashrc[0m
+[0;32m    ubuntu_1804_template: alias ll="ls -la"[0m
+[0;32m    ubuntu_1804_template: set mouse-=a[0m
+[0;32m    ubuntu_1804_template: auto eth0[0m
+[0;32m    ubuntu_1804_template: iface eth0 inet dhcp[0m
+[0;32m    ubuntu_1804_template: pre-up sleep 2[0m
+[1;31m==> ubuntu_1804_template: Sourcing file `/etc/default/grub'[0m
+[1;31m==> ubuntu_1804_template: Generating grub configuration file ...[0m
+[1;31m==> ubuntu_1804_template: Found linux image: /boot/vmlinuz-4.15.0-140-generic[0m
+[1;31m==> ubuntu_1804_template: Found initrd image: /boot/initrd.img-4.15.0-140-generic[0m
+[1;31m==> ubuntu_1804_template: Found linux image: /boot/vmlinuz-4.15.0-112-generic[0m
+[1;31m==> ubuntu_1804_template: Found initrd image: /boot/initrd.img-4.15.0-112-generic[0m
+[1;31m==> ubuntu_1804_template: done[0m
+[1;31m==> ubuntu_1804_template: --2021-04-12 11:11:55--  http://10.10.13.5:8000/lvm_ubuntu.service[0m
+[1;31m==> ubuntu_1804_template: Connecting to 10.10.13.5:8000... connected.[0m
+[1;31m==> ubuntu_1804_template: HTTP request sent, awaiting response... 200 OK[0m
+[1;31m==> ubuntu_1804_template: Length: 114 [application/octet-stream][0m
+[1;31m==> ubuntu_1804_template: Saving to: ‘lvm_ubuntu.service’[0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template:      0K                                                       100% 16.4M=0s[0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template: 2021-04-12 11:11:55 (16.4 MB/s) - ‘lvm_ubuntu.service’ saved [114/114][0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template: --2021-04-12 11:11:55--  http://10.10.13.5:8000/lvm_ubuntu.sh[0m
+[1;31m==> ubuntu_1804_template: Connecting to 10.10.13.5:8000... connected.[0m
+[1;31m==> ubuntu_1804_template: HTTP request sent, awaiting response... 200 OK[0m
+[1;31m==> ubuntu_1804_template: Length: 202 [application/x-sh][0m
+[1;31m==> ubuntu_1804_template: Saving to: ‘lvm_ubuntu.sh’[0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template:      0K                                                       100% 48.3M=0s[0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template: 2021-04-12 11:11:55 (48.3 MB/s) - ‘lvm_ubuntu.sh’ saved [202/202][0m
+[1;31m==> ubuntu_1804_template:[0m
+[1;31m==> ubuntu_1804_template: Created symlink /etc/systemd/system/default.target.wants/lvm_ubuntu.service → /etc/systemd/system/lvm_ubuntu.service.[0m
+[1;32m==> ubuntu_1804_template: Gracefully halting virtual machine...[0m
+[0;32m    ubuntu_1804_template: Waiting for VMware to clean up after itself...[0m
+[1;32m==> ubuntu_1804_template: Deleting unnecessary VMware files...[0m
+[0;32m    ubuntu_1804_template: Deleting: /vmfs/volumes/datastore1/Clone_VM_Template/ubuntu_1804_template/vmware.log[0m
+[1;32m==> ubuntu_1804_template: Compacting all attached virtual disks...[0m
+[0;32m    ubuntu_1804_template: Compacting virtual disk 1[0m
+[1;32m==> ubuntu_1804_template: Cleaning VMX prior to finishing up...[0m
+[0;32m    ubuntu_1804_template: Detaching ISO from CD-ROM device ide0:0...[0m
+[0;32m    ubuntu_1804_template: Unmounting floppy0 from VMX...[0m
+[0;32m    ubuntu_1804_template: Disabling VNC server...[0m
+[1;32m==> ubuntu_1804_template: Skipping export of virtual machine...[0m
+[1;32m==> ubuntu_1804_template: Keeping virtual machine registered with ESX host (keep_registered = true)[0m
+[1;32mBuild 'ubuntu_1804_template' finished after 8 minutes 16 seconds.[0m
+
+==> Wait completed after 8 minutes 16 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> ubuntu_1804_template: VM files in directory: /vmfs/volumes/datastore1/Clone_VM_Template/ubuntu_1804_template

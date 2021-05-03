@@ -1,0 +1,5 @@
+*.qcow2
+*.iso
+.terraform
+terraform.tfstate*
+.terraform.lock.hcl
